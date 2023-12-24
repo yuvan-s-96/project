@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Your Document Title</title>
+   <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="style.css">
+   <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #ffd292
+}
+::selection{
+  background: #DF771D;
+  color: #fff;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    
+    overflow-x: hidden;
+}
+
+
+
+header {
+    background-color:#FF9F33;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header img {
+    width: 90px;
+    height: 122px;
+}
+
+.info-container {
+    text-align: center;
+   padding-left: 8%;
+}
+
+.government-info,
+.ministry-info {
+    margin: 0;
+    background: linear-gradient(to right, #000000, #fafafa, #009931);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2vw;
+    font-weight: 400;
+    word-wrap: break-word;
+ 
+}
+
+
+.ministry-info {
+    font-weight: 600;
+}
+
+.icons {
+    display: flex;
+    align-items: center;padding-right: 10px;
+}
+
+.icons img {
+    margin-left: 10px;
+    width: 150px;
+    height: 80px;
+}
+
+@media screen and (max-width: 1350px){
+
+.wrapper{
+  align-items: center;
+  justify-content: center;
+}
+
+  
+}
+
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    padding: 30px;
+    margin-top: 3%;
+    margin-left: 4%;
+    border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #DF771D, 
+      rgba(0, 0, 0, 0)
+    )  1 100%;
+   /* Example shadow with transparency */
+  }
+  
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: #DF771D;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #DF771D;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #DF771D;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: #DF771D;
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer{
+  background:#FF9F33;;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+   </style>
+   
+</head>
+
+<body>
+   <header>
+      <img src="https://shorturl.at/rG014">
+      <div class="info-container">
+         <h1 class="government-info">Government of India</h1>
+         <h3 class="ministry-info">Ministry of Commerce and Industry</h3>
+      </div>
+      <div class="icons">
+         <img src="https://shorturl.at/fgwZ6">
+         <img src="https://shorturl.at/lA245">
+      </div>
+   </header>
+
+   <div class="wrapper">
+      <div class="title-text">
+         <div class="title login">
+            Login Form
+         </div>
+         <div class="title signup">
+            Signup Form
+         </div>
+      </div>
+      <div class="form-container">
+         <div class="border">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+         </div>
+         <div class="form-inner">
+            <form action="http://127.0.0.1:5500/Banking-Knowledge-Management-Tool-main/" class="login">
+               <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Password" required>
+               </div>
+               <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div>
+               <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Login">
+               </div>
+               <div class="signup-link">
+                  Not a member? <a href="">Signup now</a>
+               </div>
+            </form>
+            <form action="http://127.0.0.1:5500/Banking-Knowledge-Management-Tool-main/" class="signup">
+               <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Password" required>
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Confirm password" required>
+               </div>
+               <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Signup">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   
+   <div class="right-image">
+
+      <div
+         style="width: 508px;
+          height: 508px;
+           left: 597px; 
+           top: 150px; 
+           position: absolute;
+            background: #FF9F33;
+             border-radius: 50%;">
+      </div>
+
+      <img style="width: 600px;
+       height: 600px;
+        left: 585px;
+         top: 89px; position:
+          absolute"
+           img
+         src="https://i.ibb.co/zSyS4pW/Whats-App-Image-2023-12-19-at-5-17-37-PM.png"
+         alt="Whats-App-Image-2023-12-19-at-5-17-37-PM">
+         <div style="width: 323px; height: 318px; left: 990px; top: 256px; position: absolute; text-align: center; color: black; font-size: 100px; font-family: Inter; font-style: italic; font-weight: 800; word-wrap: break-word">less is more!</div>
+
+
+
+   </div>
+   <footer>
+      <div class="footer">
+      <div class="row">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+   
+      
+      <div class="row">
+      KGISL Copyright © 2021 KGISL - All rights reserved  
+      </div>
+      </div>
+      </footer>
+   <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (() => {
+         loginForm.style.marginLeft = "-50%";
+         loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (() => {
+         loginForm.style.marginLeft = "0%";
+         loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (() => {
+         signupBtn.click();
+         return false;
+      });
+   </script>
+
+</body>
+
+</html>
